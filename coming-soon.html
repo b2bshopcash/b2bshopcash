@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B2B - Coming Soon - Something Exciting is Brewing</title>
+    <!-- Placeholder SVG Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="coming-soon.css">
+</head>
+<body oncontextmenu="return false;">
+    
+    <div class="background-animation">
+        <div class="gradient-sphere sphere-1"></div>
+        <div class="gradient-sphere sphere-2"></div>
+        <div class="gradient-sphere sphere-3"></div>
+    </div>
+
+    <main class="container">
+        <div class="glass-panel">
+            <h2 class="brand">www.b2bshopcash.in</h2>
+            <h1 class="headline" id="typing-text"></h1>
+            <p class="subheadline">We're crafting an unparalleled shopping experience. Be the first to know when we launch.</p>
+            
+
+
+            <div class="countdown" id="countdown">
+                <div class="time-box">
+                    <span class="time" id="days">00</span>
+                    <span class="label">Days</span>
+                </div>
+                <div class="time-box">
+                    <span class="time" id="hours">00</span>
+                    <span class="label">Hours</span>
+                </div>
+                <div class="time-box">
+                    <span class="time" id="minutes">00</span>
+                    <span class="label">Minutes</span>
+                </div>
+                <div class="time-box">
+                    <span class="time" id="seconds">00</span>
+                    <span class="label">Seconds</span>
+                </div>
+            </div>
+
+            <div class="actions-group">
+                <div class="form-container" style="width: 100%; max-width: 400px;">
+                    <form class="notify-form" id="notify-form" action="https://formsubmit.co/ajax/info@b2bshopcash.in" method="POST">
+                        <input type="hidden" name="_subject" value="Coming Soon Notify Me">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="email" name="email" placeholder="Enter your email address" required class="email-input">
+                        <button type="submit" class="notify-btn" id="notify-btn">Notify Me</button>
+                    </form>
+                    <div id="form-message" style="display: none; margin-top: 1rem; font-size: 0.95rem; font-weight: 500;"></div>
+                </div>
+            </div>
+
+            <!-- 3. Feature Highlights -->
+            <div class="features-list">
+                <div class="feature-item">
+                    <span class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg></span>
+                    <span>Free Shipping</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg></span>
+                    <span>Early Access Deals</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span>
+                    <span>Premium Quality</span>
+                </div>
+            </div>
+
+            <!-- Social Media Box -->
+            <div class="social-links-box">
+                <a href="https://api.whatsapp.com/send/?phone=+919620484929&text=Hi%20B2BShopCash%20-%20I%27m%20interested%20in%20shopping%20in%20B2B%20Space!%20https://www.b2bshopcash.in" target="_blank" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:info@b2bshopcash.in" title="Contact Us">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+
+            <div class="powered-by">
+                <p>Powered by <a href="https://www.thedteam.in" target="_blank">www.thedteam.in</a></p>
+            </div>
+        </div>
+    </main>
+
+
+
+    <script>
+        // Set a fixed launch date for everyone
+        const countDownDate = new Date("January 01, 2027 00:00:00").getTime();
+
+        // Update the countdown every 1 second
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Pad with zeros
+            document.getElementById("days").innerText = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "<div class='launched-msg'>WE ARE LIVE!🎉</div>";
+            }
+        }, 1000);
+
+        // Typing Effect
+        const text1 = "Get ready to be ";
+        const text2 = "amazed.";
+        const typeSpeed = 75; 
+        let i1 = 0;
+        let i2 = 0;
+        const typingEl = document.getElementById('typing-text');
+
+        function typeWriter() {
+            if (i1 < text1.length) {
+                typingEl.innerHTML = text1.substring(0, i1 + 1) + '<span class="cursor">|</span>';
+                i1++;
+                setTimeout(typeWriter, typeSpeed);
+            } else if (i2 === 0) {
+                typingEl.innerHTML = text1 + '<br><span class="highlight"></span><span class="cursor">|</span>';
+                i2++;
+                setTimeout(typeWriter, typeSpeed);
+            } else if (i2 <= text2.length) {
+                typingEl.innerHTML = text1 + '<br><span class="highlight">' + text2.substring(0, i2) + '</span><span class="cursor">|</span>';
+                i2++;
+                setTimeout(typeWriter, typeSpeed);
+            } else {
+                typingEl.innerHTML = text1 + '<br><span class="highlight">' + text2 + '</span><span class="cursor blink">|</span>';
+                // Remove cursor after it blinks a couple times
+                setTimeout(() => {
+                    typingEl.innerHTML = text1 + '<br><span class="highlight">' + text2 + '</span>';
+                }, 1500);
+            }
+        }
+
+        typeWriter();
+
+        // Randomize Background Colors on Load
+        function setRandomGradients() {
+            const root = document.documentElement;
+            
+            // Generate a random HSL color. minL and maxL control how dark/light it is.
+            const randHSL = (minL, maxL) => {
+                const h = Math.floor(Math.random() * 360);
+                const s = 60 + Math.floor(Math.random() * 40); // 60-100% saturation
+                const l = minL + Math.floor(Math.random() * (maxL - minL)); // Lightness
+                return `hsl(${h}, ${s}%, ${l}%)`;
+            };
+
+            // Main Background (Dark colors so text remains readable)
+            root.style.setProperty('--bg-color-1', randHSL(10, 25));
+            root.style.setProperty('--bg-color-2', randHSL(10, 25));
+            root.style.setProperty('--bg-color-3', randHSL(10, 25));
+            root.style.setProperty('--bg-color-4', randHSL(10, 25));
+
+            // Floating Spheres (Brighter, vibrant colors for the glowing effect)
+            root.style.setProperty('--sphere-1-color', randHSL(45, 65));
+            root.style.setProperty('--sphere-2-color', randHSL(45, 65));
+            root.style.setProperty('--sphere-3-color', randHSL(45, 65));
+        }
+
+        // Apply immediately
+        setRandomGradients();
+
+        // AJAX Form Submission Logic
+        const form = document.getElementById('notify-form');
+        const formMessage = document.getElementById('form-message');
+        const notifyBtn = document.getElementById('notify-btn');
+
+        if(form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Show loading state
+                const originalBtnText = notifyBtn.innerText;
+                notifyBtn.innerText = 'Sending...';
+                notifyBtn.disabled = true;
+
+                const formData = new FormData(form);
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if(data.success || data.ok) {
+                        form.style.display = 'none';
+                        formMessage.style.display = 'block';
+                        formMessage.style.color = '#10b981'; // Green
+                        formMessage.innerHTML = '✨ Thanks for subscribing! We will notify you when we launch.';
+                    } else {
+                        throw new Error('FormSubmit error');
+                    }
+                })
+                .catch(error => {
+                    formMessage.style.display = 'block';
+                    formMessage.style.color = '#ef4444'; // Red
+                    formMessage.innerHTML = 'Oops! Something went wrong. Please try again.';
+                    notifyBtn.innerText = originalBtnText;
+                    notifyBtn.disabled = false;
+                });
+            });
+        }
+    </script>
+</body>
+</html>
