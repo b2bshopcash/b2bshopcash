@@ -70,6 +70,10 @@
             animation: gradientBG 15s ease infinite;
             color: #FFFFFF;
             min-height: 100vh;
+            min-height: 100dvh;
+        }
+        .safe-area-bottom {
+            padding-bottom: max(1.75rem, env(safe-area-inset-bottom, 1.75rem));
         }
 
         @keyframes gradientBG {
@@ -99,7 +103,7 @@
         }
     </style>
 </head>
-<body class="antialiased flex flex-col h-screen overflow-hidden selection:bg-purple-500 selection:text-white">
+<body class="antialiased flex flex-col min-h-screen min-h-[100dvh] overflow-x-hidden selection:bg-purple-500 selection:text-white">
 
     <!-- Background Ambient Glow Orbs -->
     <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
@@ -143,11 +147,11 @@
             </div>
 
             <!-- 404 Big Display -->
-            <div class="relative my-1 select-none animate-float">
-                <h1 class="text-6xl sm:text-8xl md:text-9xl font-display font-black tracking-tighter leading-none text-brand-gradient text-glow">
+            <div class="relative my-2 sm:my-1 select-none animate-float">
+                <h1 class="text-8xl sm:text-8xl md:text-9xl font-display font-black tracking-tighter leading-none text-brand-gradient text-glow">
                     404
                 </h1>
-                <div class="absolute inset-0 flex items-center justify-center opacity-10 blur-xl text-6xl sm:text-8xl md:text-9xl font-display font-black text-brand-gradient">
+                <div class="absolute inset-0 flex items-center justify-center opacity-10 blur-xl text-8xl sm:text-8xl md:text-9xl font-display font-black text-brand-gradient">
                     404
                 </div>
             </div>
@@ -174,32 +178,32 @@
             </div>
 
             <!-- Quick Navigation Tiles -->
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left">
+            <div class="grid grid-cols-3 gap-2 sm:gap-3 text-center sm:text-left">
                 <!-- Tile 1 -->
-                <a href="index.html" class="glass-card p-3.5 sm:p-4 rounded-xl hover:border-purple-500/50 transition-all group">
-                    <div class="w-8 h-8 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-2 group-hover:scale-110 transition-transform">
-                        <i data-lucide="layers" class="w-4 h-4"></i>
+                <a href="index.html" class="glass-card p-2.5 sm:p-4 rounded-xl hover:border-purple-500/50 transition-all group flex flex-col items-center sm:items-start justify-between">
+                    <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-1.5 sm:mb-2 group-hover:scale-110 transition-transform">
+                        <i data-lucide="layers" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
                     </div>
-                    <h3 class="text-white font-medium text-xs sm:text-sm mb-0.5 group-hover:text-purple-300 transition-colors">Wholesale Portal</h3>
-                    <p class="text-gray-400 text-[11px] leading-snug">Browse bulk deals, credit terms & features.</p>
+                    <h3 class="text-white font-medium text-[11px] sm:text-sm mb-0.5 group-hover:text-purple-300 transition-colors leading-tight">Wholesale Portal</h3>
+                    <p class="text-gray-400 text-[10px] sm:text-[11px] leading-snug">Browse bulk deals & features.</p>
                 </a>
 
                 <!-- Tile 2 -->
-                <a href="index.html" class="glass-card p-3.5 sm:p-4 rounded-xl hover:border-purple-500/50 transition-all group">
-                    <div class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-2 group-hover:scale-110 transition-transform">
-                        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                <a href="index.html" class="glass-card p-2.5 sm:p-4 rounded-xl hover:border-purple-500/50 transition-all group flex flex-col items-center sm:items-start justify-between">
+                    <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-1.5 sm:mb-2 group-hover:scale-110 transition-transform">
+                        <i data-lucide="shopping-bag" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
                     </div>
-                    <h3 class="text-white font-medium text-xs sm:text-sm mb-0.5 group-hover:text-indigo-300 transition-colors">Online Store</h3>
-                    <p class="text-gray-400 text-[11px] leading-snug">Discover retail & wholesale catalog products.</p>
+                    <h3 class="text-white font-medium text-[11px] sm:text-sm mb-0.5 group-hover:text-indigo-300 transition-colors leading-tight">Online Store</h3>
+                    <p class="text-gray-400 text-[10px] sm:text-[11px] leading-snug">Discover retail & wholesale catalog.</p>
                 </a>
 
                 <!-- Tile 3 -->
-                <a href="https://api.whatsapp.com/send/?phone=+919620484929&text=Hi%20B2BShopCash%20Team%2C%20I%20encountered%20a%20404%20error%20on%20the%20website." target="_blank" rel="noopener noreferrer" class="glass-card p-3.5 sm:p-4 rounded-xl hover:border-purple-500/50 transition-all group">
-                    <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-2 group-hover:scale-110 transition-transform">
-                        <i data-lucide="help-circle" class="w-4 h-4"></i>
+                <a href="https://api.whatsapp.com/send/?phone=919620484929&text=Hi%20B2BShopCash%20Team%2C%20I%20encountered%20a%20404%20error%20on%20the%20website." target="_blank" rel="noopener noreferrer" class="glass-card p-2.5 sm:p-4 rounded-xl hover:border-purple-500/50 transition-all group flex flex-col items-center sm:items-start justify-between">
+                    <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-1.5 sm:mb-2 group-hover:scale-110 transition-transform">
+                        <i data-lucide="help-circle" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
                     </div>
-                    <h3 class="text-white font-medium text-xs sm:text-sm mb-0.5 group-hover:text-emerald-300 transition-colors">Live Helpdesk</h3>
-                    <p class="text-gray-400 text-[11px] leading-snug">Need assistance? Chat directly with support.</p>
+                    <h3 class="text-white font-medium text-[11px] sm:text-sm mb-0.5 group-hover:text-emerald-300 transition-colors leading-tight">Live Helpdesk</h3>
+                    <p class="text-gray-400 text-[10px] sm:text-[11px] leading-snug">Need help? Chat with support.</p>
                 </a>
             </div>
 
@@ -207,7 +211,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-borderGray bg-obsidian/80 py-3.5 mt-auto shrink-0">
+    <footer class="border-t border-borderGray bg-obsidian/80 py-4 pb-8 sm:pb-4 mt-auto shrink-0 safe-area-bottom">
         <div class="container mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500 font-medium text-center">
             <p>&copy; 2026 B2B Shop Cash. All Rights Reserved.</p>
             <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-center">
