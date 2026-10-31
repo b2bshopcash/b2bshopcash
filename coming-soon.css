@@ -229,11 +229,29 @@ body.mouse-active {
 /* Actions Group */
 .actions-group {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     margin-bottom: 1.5rem;
-    flex-wrap: wrap;
+    width: 100%;
+}
+
+.wishes-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.wishes-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: block;
+    object-fit: cover;
 }
 
 .notify-form {

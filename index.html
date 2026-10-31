@@ -50,7 +50,7 @@
             </div>
 
             <div class="actions-group">
-                <div class="form-container" style="width: 100%; max-width: 400px;">
+                <div class="form-container" id="cta-container" style="width: 100%; max-width: 400px; display: flex; justify-content: center;">
                     <form class="notify-form" id="notify-form" action="https://formsubmit.co/ajax/info@b2bshopcash.in" method="POST">
                         <input type="hidden" name="_subject" value="Coming Soon Notify Me">
                         <input type="hidden" name="_captcha" value="false">
@@ -60,7 +60,9 @@
                     <div id="form-message" style="display: none; margin-top: 1rem; font-size: 0.95rem; font-weight: 500;"></div>
                 </div>
 
-<img src="images/Nov-1-Wishes.jpeg" style="width: 500px;">
+                <div class="wishes-banner">
+                    <img src="images/Nov-1-Wishes.jpeg" alt="November 1 Wishes" class="wishes-img" style="width: 100%; max-width: 500px; height: auto; border-radius: 16px; display: block;">
+                </div>
             </div>
 
             <!-- 3. Feature Highlights -->
@@ -108,7 +110,7 @@
         const countDownDate = new Date("November 01, 2026 13:00:00").getTime();
 
         // Update the countdown every 1 second
-        const x = setInterval(function() {
+        function updateCountdown() {
             const now = new Date().getTime();
             const distance = countDownDate - now;
 
@@ -118,17 +120,28 @@
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             // Pad with zeros
-            document.getElementById("days").innerText = days.toString().padStart(2, '0');
-            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
-            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
-            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+            const daysEl = document.getElementById("days");
+            const hoursEl = document.getElementById("hours");
+            const minutesEl = document.getElementById("minutes");
+            const secondsEl = document.getElementById("seconds");
+
+            if (daysEl) daysEl.innerText = days.toString().padStart(2, '0');
+            if (hoursEl) hoursEl.innerText = hours.toString().padStart(2, '0');
+            if (minutesEl) minutesEl.innerText = minutes.toString().padStart(2, '0');
+            if (secondsEl) secondsEl.innerText = seconds.toString().padStart(2, '0');
 
             if (distance < 0) {
-                clearInterval(x);
+                if (typeof x !== 'undefined') clearInterval(x);
                 document.getElementById("countdown").innerHTML = "<div class='launched-msg'>WE ARE LIVE!🎉</div>";
-                document.querySelector(".actions-group").innerHTML = '<a href="https://www.b2bshopcash.in/new-site/ಬಿ2ಬಿ-ಶಾಪ್-ಕ್ಯಾಶ್-ಕನ್ನಡ.html" class="notify-btn" style="display:inline-block;text-decoration:none;text-align:center;padding:0.85rem 2.5rem;font-size:1.1rem;">View Site 🚀</a>';
+                const ctaContainer = document.getElementById("cta-container");
+                if (ctaContainer) {
+                    ctaContainer.innerHTML = '<a href="https://www.b2bshopcash.in/new-site/kannada.html" class="notify-btn" style="display:inline-block;text-decoration:none;text-align:center;padding:0.85rem 2.5rem;font-size:1.1rem;">View Site 🚀</a>';
+                }
             }
-        }, 1000);
+        }
+
+        updateCountdown();
+        const x = setInterval(updateCountdown, 1000);
 
         // Typing Effect
         const text1 = "Get ready to be ";
