@@ -30,34 +30,32 @@
             
 
 
+            <div class="live-status-container" id="live-status-container" style="margin-bottom: 1rem;">
+                <div class="launched-msg">WE ARE LIVE! 🎉</div>
+            </div>
+
             <div class="countdown" id="countdown">
                 <div class="time-box">
-                    <span class="time" id="days">00</span>
-                    <span class="label">Days</span>
+                    <span class="time" id="date-num">01</span>
+                    <span class="label">Date</span>
                 </div>
                 <div class="time-box">
-                    <span class="time" id="hours">00</span>
-                    <span class="label">Hours</span>
+                    <span class="time" id="date-month">Nov</span>
+                    <span class="label">Month</span>
                 </div>
                 <div class="time-box">
-                    <span class="time" id="minutes">00</span>
-                    <span class="label">Minutes</span>
+                    <span class="time" id="date-year">2026</span>
+                    <span class="label">Year</span>
                 </div>
                 <div class="time-box">
-                    <span class="time" id="seconds">00</span>
-                    <span class="label">Seconds</span>
+                    <span class="time" id="date-day">Sun</span>
+                    <span class="label">Day</span>
                 </div>
             </div>
 
             <div class="actions-group">
                 <div class="form-container" id="cta-container" style="width: 100%; max-width: 400px; display: flex; justify-content: center;">
-                    <form class="notify-form" id="notify-form" action="https://formsubmit.co/ajax/info@b2bshopcash.in" method="POST">
-                        <input type="hidden" name="_subject" value="Coming Soon Notify Me">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="email" name="email" placeholder="Enter your email address" required class="email-input">
-                        <button type="submit" class="notify-btn" id="notify-btn">Notify Me</button>
-                    </form>
-                    <div id="form-message" style="display: none; margin-top: 1rem; font-size: 0.95rem; font-weight: 500;"></div>
+                    <a href="https://www.b2bshopcash.in/new-site/kannada.html" class="notify-btn" style="display:inline-block;text-decoration:none;text-align:center;padding:0.85rem 2.5rem;font-size:1.1rem;">View Site 🚀</a>
                 </div>
 
                 <div class="wishes-banner">
@@ -106,42 +104,25 @@
 
 
     <script>
-        // Set a fixed launch date for everyone
-        const countDownDate = new Date("November 01, 2026 13:00:00").getTime();
+        // Display today's date in the timer box format
+        function updateTodayDate() {
+            const today = new Date();
+            const dateNum = String(today.getDate()).padStart(2, '0');
+            const allMonths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            const allDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-        // Update the countdown every 1 second
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = countDownDate - now;
+            const dateNumEl = document.getElementById("date-num");
+            const dateMonthEl = document.getElementById("date-month");
+            const dateYearEl = document.getElementById("date-year");
+            const dateDayEl = document.getElementById("date-day");
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Pad with zeros
-            const daysEl = document.getElementById("days");
-            const hoursEl = document.getElementById("hours");
-            const minutesEl = document.getElementById("minutes");
-            const secondsEl = document.getElementById("seconds");
-
-            if (daysEl) daysEl.innerText = days.toString().padStart(2, '0');
-            if (hoursEl) hoursEl.innerText = hours.toString().padStart(2, '0');
-            if (minutesEl) minutesEl.innerText = minutes.toString().padStart(2, '0');
-            if (secondsEl) secondsEl.innerText = seconds.toString().padStart(2, '0');
-
-            if (distance < 0) {
-                if (typeof x !== 'undefined') clearInterval(x);
-                document.getElementById("countdown").innerHTML = "<div class='launched-msg'>WE ARE LIVE!🎉</div>";
-                const ctaContainer = document.getElementById("cta-container");
-                if (ctaContainer) {
-                    ctaContainer.innerHTML = '<a href="https://www.b2bshopcash.in/new-site/kannada.html" class="notify-btn" style="display:inline-block;text-decoration:none;text-align:center;padding:0.85rem 2.5rem;font-size:1.1rem;">View Site 🚀</a>';
-                }
-            }
+            if (dateNumEl) dateNumEl.innerText = dateNum;
+            if (dateMonthEl) dateMonthEl.innerText = allMonths[today.getMonth()];
+            if (dateYearEl) dateYearEl.innerText = today.getFullYear();
+            if (dateDayEl) dateDayEl.innerText = allDays[today.getDay()];
         }
 
-        updateCountdown();
-        const x = setInterval(updateCountdown, 1000);
+        updateTodayDate();
 
         // Typing Effect
         const text1 = "Get ready to be ";
