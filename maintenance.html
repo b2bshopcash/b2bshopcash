@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Maintenance | B2BShopCash.in</title>
+    
+    <!-- Standard Primary SEO -->
+    <meta name="title" content="Under Maintenance | B2BShopCash.in">
+    <meta name="description" content="B2B Shop Cash is temporarily undergoing scheduled performance upgrades and security enhancements. We will be back online shortly.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Android & Mobile Web PWA -->
+    <meta name="theme-color" content="#0f172a">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="B2B Shop Cash">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- iOS / Apple Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="B2B Shop Cash">
+    <link rel="apple-touch-icon" href="images/fav/favicon.svg">
+    <link rel="mask-icon" href="images/fav/favicon.svg" color="#a855f7">
+
+    <!-- Windows / Microsoft Edge & Tiles -->
+    <meta name="msapplication-TileColor" content="#0f172a">
+    <meta name="msapplication-TileImage" content="images/fav/favicon.svg">
+    <meta name="msapplication-navbutton-color" content="#0f172a">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/fav/favicon.svg">
+    <link rel="shortcut icon" type="image/svg+xml" href="images/fav/favicon.svg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+        <!-- Font Awesome 6 (for WhatsApp brand icon) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Tailwind Config & Custom CSS matching B2BShopCash.in Theme -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#0f172a',
+                        borderGray: 'rgba(255, 255, 255, 0.1)',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .glass-card {
+                @apply bg-obsidian/50 backdrop-blur-xl border border-borderGray shadow-2xl;
+            }
+            .glass-panel {
+                @apply bg-obsidian/70 backdrop-blur-lg border border-borderGray;
+            }
+            .text-brand-gradient {
+                @apply bg-clip-text text-transparent bg-gradient-to-r from-[#6366f1] via-[#8b5cf6] to-[#a855f7];
+            }
+            .bg-brand-gradient {
+                @apply bg-gradient-to-r from-[#6366f1] to-[#a855f7];
+            }
+            .text-glow {
+                text-shadow: 0 0 40px rgba(168, 85, 247, 0.35);
+            }
+            .animate-float {
+                animation: float 6s ease-in-out infinite;
+            }
+        }
+        
+        body {
+            background: linear-gradient(-45deg, #0f172a, #1e1b4b, #312e81, #172554);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #FFFFFF;
+            min-height: 100vh;
+            min-height: 100dvh;
+        }
+        .safe-area-bottom {
+            padding-bottom: max(1.75rem, env(safe-area-inset-bottom, 1.75rem));
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #334155;
+        }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen min-h-[100dvh] overflow-x-hidden selection:bg-purple-500 selection:text-white">
+
+    <!-- Background Ambient Glow Orbs -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+        <div class="absolute -top-32 -left-32 w-96 h-96 bg-[#6366f1]/20 blur-[120px] rounded-full"></div>
+        <div class="absolute top-1/2 -right-32 w-96 h-96 bg-[#a855f7]/20 blur-[130px] rounded-full"></div>
+        <div class="absolute -bottom-32 left-1/3 w-80 h-80 bg-amber-500/10 blur-[120px] rounded-full"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="w-full border-b border-borderGray bg-obsidian/70 backdrop-blur-md sticky top-0 z-50 shrink-0">
+        <div class="container mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2.5 group">
+                <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-brand-gradient flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white w-4 h-4">
+                        <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/>
+                        <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/>
+                    </svg>
+                </div>
+                <div class="font-display font-bold text-xl sm:text-2xl tracking-tight text-white flex items-center">
+                    <span>B2BShopCash</span><span class="text-brand-gradient">.in</span>
+                </div>
+            </a>
+            
+            <div class="flex items-center gap-3">
+                <a href="https://api.whatsapp.com/send/?phone=919620484929&text=Hi%20B2BShopCash%2C%20I%20have%20an%20urgent%20order%20inquiry%20during%20maintenance." target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 text-xs sm:text-sm font-semibold text-emerald-400 hover:text-emerald-300 border border-emerald-500/30 hover:border-emerald-500/60 bg-emerald-500/10 rounded-lg transition-all flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-base text-emerald-400"></i>
+                    <span>WhatsApp Support</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Maintenance Section -->
+    <main class="flex-1 flex items-center justify-center px-6 py-8 sm:py-12 relative">
+        <div class="max-w-2xl w-full text-center relative z-10">
+            
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-300 text-[10px] sm:text-xs font-semibold uppercase tracking-normal sm:tracking-wider whitespace-nowrap mb-6 max-w-full">
+                <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-amber-400 animate-pulse shrink-0"></span>
+                <span class="whitespace-nowrap">Scheduled Maintenance &bull; Upgrading Infrastructure</span>
+            </div>
+
+            <!-- Maintenance Icon Display -->
+            <div class="relative my-4 select-none animate-float flex justify-center">
+                <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-brand-gradient p-0.5 shadow-[0_0_50px_rgba(168,85,247,0.35)]">
+                    <div class="w-full h-full bg-obsidian/90 rounded-[22px] flex items-center justify-center text-purple-400">
+                        <i data-lucide="wrench" class="w-12 h-12 sm:w-14 sm:h-14"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Title & Description -->
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-display font-black text-white mb-3 tracking-tight">
+                We're Crafting an Enhanced Experience
+            </h1>
+            <p class="text-gray-300 text-sm sm:text-base mb-6 max-w-lg mx-auto leading-relaxed">
+                Our platform is temporarily offline for scheduled performance upgrades and security enhancements. We're tuning our servers to serve your B2B orders faster.
+            </p>
+
+            <!-- Real-Time Status & Progress Box -->
+            <div class="glass-card p-4 sm:p-5 rounded-2xl mb-6 max-w-md mx-auto border-purple-500/20 text-left">
+                <div class="flex items-center justify-between text-xs sm:text-sm text-gray-300 mb-2.5">
+                    <span class="flex items-center gap-1.5 font-medium">
+                        <i data-lucide="clock" class="w-4 h-4 text-purple-400"></i>
+                        <span>Expected Uptime in:</span>
+                    </span>
+                    <span id="uptime-countdown" class="text-emerald-400 font-bold font-mono tracking-wide text-xs sm:text-sm">Calculating...</span>
+                </div>
+
+                <!-- Animated Dynamic Progress Bar -->
+                <div class="w-full bg-black/50 h-2.5 rounded-full overflow-hidden border border-white/10 relative p-0.5 mb-2">
+                    <div id="maintenance-progress-bar" class="bg-brand-gradient h-full rounded-full transition-all duration-700 ease-out shadow-[0_0_12px_rgba(168,85,247,0.5)]" style="width: 0%;"></div>
+                </div>
+
+                <!-- Progress Details -->
+                <div class="flex items-center justify-between text-[11px] text-gray-400 font-medium">
+                    <span id="progress-percent" class="text-purple-300 font-semibold">0% Completed</span>
+                    <span id="target-time-label">Target: Calculating...</span>
+                </div>
+
+                <div class="border-t border-white/5 mt-3 pt-2.5 flex items-start gap-2 text-[11px] text-gray-400">
+                    <span class="text-amber-400">💡</span>
+                    <span><strong class="text-gray-300">Urgent order?</strong> Our WhatsApp dispatch desk remains fully operational.</span>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
+                <button onclick="window.location.reload()" class="w-full sm:w-auto px-6 py-3 text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#6366f1] to-[#a855f7] hover:from-[#4f46e5] hover:to-[#9333ea] rounded-xl shadow-[0_0_25px_rgba(168,85,247,0.35)] transition-all flex items-center justify-center gap-2 cursor-pointer">
+                    <i data-lucide="refresh-cw" class="w-4 h-4"></i>
+                    <span>Refresh & Check Status</span>
+                </button>
+                
+                <a href="https://api.whatsapp.com/send/?phone=919620484929&text=Hi%20B2BShopCash%2C%20I%20have%20an%20urgent%20wholesale%20inquiry." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3 text-xs sm:text-sm font-semibold text-emerald-400 hover:text-emerald-300 bg-obsidian/70 hover:bg-obsidian border border-emerald-500/30 hover:border-emerald-500/60 rounded-xl transition-all flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
+                    <span>Contact via WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Support Tiles -->
+            <div class="grid grid-cols-3 gap-2 sm:gap-3 text-center sm:text-left">
+                <!-- Tile 1 -->
+                <a href="https://api.whatsapp.com/send/?phone=919620484929&text=Hi%20B2BShopCash%2C%20need%20urgent%20support." target="_blank" rel="noopener noreferrer" class="glass-card p-2.5 sm:p-4 rounded-xl hover:border-emerald-500/50 transition-all group flex flex-col items-center sm:items-start justify-between">
+                    <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-1.5 sm:mb-2 group-hover:scale-110 transition-transform shrink-0">
+                        <i class="fa-brands fa-whatsapp text-base sm:text-lg"></i>
+                    </div>
+                    <h3 class="text-white font-medium text-[11px] sm:text-sm mb-0.5 group-hover:text-emerald-300 transition-colors leading-tight">Instant Desk</h3>
+                    <p class="text-gray-400 text-[9px] sm:text-[11px] leading-snug break-all sm:break-normal">+91 96204 84929</p>
+                </a>
+
+                <!-- Tile 2 -->
+                <a href="mailto:support@b2bshopcash.in" class="glass-card p-2.5 sm:p-4 rounded-xl hover:border-purple-500/50 transition-all group flex flex-col items-center sm:items-start justify-between">
+                    <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-1.5 sm:mb-2 group-hover:scale-110 transition-transform shrink-0">
+                        <i data-lucide="mail" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+                    </div>
+                    <h3 class="text-white font-medium text-[11px] sm:text-sm mb-0.5 group-hover:text-purple-300 transition-colors leading-tight">Email Support</h3>
+                    <p class="text-gray-400 text-[9px] sm:text-[11px] leading-snug break-all sm:break-normal">support@b2bshopcash.in</p>
+                </a>
+
+                <!-- Tile 3 -->
+                <div class="glass-card p-2.5 sm:p-4 rounded-xl border-purple-500/20 flex flex-col items-center sm:items-start justify-between">
+                    <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-1.5 sm:mb-2 shrink-0">
+                        <i data-lucide="shield-check" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+                    </div>
+                    <h3 class="text-white font-medium text-[11px] sm:text-sm mb-0.5 leading-tight">Data Protected</h3>
+                    <p class="text-gray-400 text-[9px] sm:text-[11px] leading-snug">Orders securely stored.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-borderGray bg-obsidian/80 py-4 pb-8 sm:pb-4 mt-auto shrink-0 safe-area-bottom">
+        <div class="container mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500 font-medium text-center">
+            <p>&copy; 2026 B2B Shop Cash. All Rights Reserved.</p>
+            <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-center">
+                <a href="mailto:support@b2bshopcash.in" class="hover:text-gray-300 transition-colors">Contact Support</a>
+                <span class="text-gray-600">&bull;</span>
+                <p>Powered by <a href="https://www.thedteam.in/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 transition-colors">The 'D Team</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Real-Time Maintenance Progress Script -->
+    <script>
+        // =======================================================
+        // ⚙️ REAL-TIME CUSTOM MAINTENANCE CONFIGURATION
+        // =======================================================
+        // You can set custom time in 3 ways:
+        // 1. Set TARGET_TIME below: e.g. "November 05, 2026 01:30:00"
+        // 2. Or set DURATION_MINUTES (e.g. 45 for 45 minutes)
+        // 3. Or pass via URL: maintenance.html?minutes=30 OR maintenance.html?until=2026-11-05T02:00:00
+        const MAINTENANCE_CONFIG = {
+            // Option 1: Fixed Target completion date/time string (leave "" to use DURATION_MINUTES)
+            TARGET_TIME: "",
+
+            // Option 2: Maintenance duration in minutes (e.g. 60 minutes)
+            DURATION_MINUTES: 0,
+
+            // Total maintenance window in minutes (used to calculate 0% - 100% progress)
+            TOTAL_WINDOW_MINUTES: 60,
+
+            // Automatically redirect to homepage when countdown reaches 0?
+            AUTO_REDIRECT: true,
+            REDIRECT_URL: "index.html"
+        };
+
+        (function initMaintenanceTimer() {
+            lucide.createIcons();
+
+            // Check URL overrides: ?minutes=30 OR ?until=2026-11-05T02:00:00
+            const urlParams = new URLSearchParams(window.location.search);
+            const paramMinutes = urlParams.get('minutes');
+            const paramUntil = urlParams.get('until');
+
+            const durationMins = paramMinutes ? parseInt(paramMinutes, 10) : MAINTENANCE_CONFIG.DURATION_MINUTES;
+
+            let targetTimestamp;
+            let startTimestamp;
+            let totalWindowMs;
+
+            if (paramUntil) {
+                targetTimestamp = new Date(paramUntil).getTime();
+                totalWindowMs = (MAINTENANCE_CONFIG.TOTAL_WINDOW_MINUTES || 60) * 60 * 1000;
+                startTimestamp = targetTimestamp - totalWindowMs;
+            } else if (MAINTENANCE_CONFIG.TARGET_TIME) {
+                targetTimestamp = new Date(MAINTENANCE_CONFIG.TARGET_TIME).getTime();
+                totalWindowMs = (MAINTENANCE_CONFIG.TOTAL_WINDOW_MINUTES || 60) * 60 * 1000;
+                startTimestamp = targetTimestamp - totalWindowMs;
+            } else {
+                // Duration-based: persist start & target so page refreshes maintain continuous countdown without resetting
+                const targetKey = 'b2b_maintenance_target_ts';
+                const startKey = 'b2b_maintenance_start_ts';
+                const durationKey = 'b2b_maintenance_duration_mins';
+
+                const savedDuration = sessionStorage.getItem(durationKey);
+                let savedTarget = sessionStorage.getItem(targetKey);
+                let savedStart = sessionStorage.getItem(startKey);
+                
+                // If duration changed in config/URL or cache is missing/expired, recalculate fresh start and target
+                if (!savedTarget || !savedStart || savedDuration !== String(durationMins) || isNaN(savedTarget) || parseInt(savedTarget, 10) < Date.now()) {
+                    const now = Date.now();
+                    savedStart = String(now);
+                    savedTarget = String(now + (durationMins * 60 * 1000));
+                    sessionStorage.setItem(durationKey, String(durationMins));
+                    sessionStorage.setItem(startKey, savedStart);
+                    sessionStorage.setItem(targetKey, savedTarget);
+                }
+                startTimestamp = parseInt(savedStart, 10);
+                targetTimestamp = parseInt(savedTarget, 10);
+                totalWindowMs = durationMins * 60 * 1000;
+            }
+
+            const countdownEl = document.getElementById('uptime-countdown');
+            const progressBar = document.getElementById('maintenance-progress-bar');
+            const percentEl = document.getElementById('progress-percent');
+            const targetLabelEl = document.getElementById('target-time-label');
+
+            // Format target clock display (e.g., "Target: 11:45 PM")
+            if (targetLabelEl && !isNaN(targetTimestamp)) {
+                const targetDate = new Date(targetTimestamp);
+                const timeString = targetDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
+                targetLabelEl.textContent = `Target: ${timeString}`;
+            }
+
+            function updateProgress() {
+                const now = Date.now();
+                const distance = targetTimestamp - now;
+
+                if (distance <= 0) {
+                    if (countdownEl) {
+                        countdownEl.innerHTML = '<span class="text-emerald-400 font-bold">Systems Online! 🎉</span>';
+                    }
+                    if (progressBar) {
+                        progressBar.style.width = '100%';
+                        progressBar.className = 'bg-emerald-500 h-full rounded-full shadow-[0_0_15px_rgba(16,185,129,0.6)]';
+                    }
+                    if (percentEl) {
+                        percentEl.textContent = '100% Completed';
+                        percentEl.className = 'text-emerald-400 font-semibold';
+                    }
+
+                    if (MAINTENANCE_CONFIG.AUTO_REDIRECT) {
+                        setTimeout(() => {
+                            window.location.href = MAINTENANCE_CONFIG.REDIRECT_URL;
+                        }, 2000);
+                    }
+                    return;
+                }
+
+                // Calculate hours, minutes, seconds remaining
+                const hours = Math.floor(distance / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                let timeDisplay = '';
+                if (hours > 0) {
+                    timeDisplay = `${hours}h ${String(minutes).padStart(2, '0')}m ${String(seconds).padStart(2, '0')}s`;
+                } else {
+                    timeDisplay = `${minutes}m ${String(seconds).padStart(2, '0')}s`;
+                }
+
+                if (countdownEl) {
+                    countdownEl.textContent = timeDisplay;
+                }
+
+                // Compute real-time progress percentage based on elapsed time from start
+                const elapsedMs = Math.max(0, now - startTimestamp);
+                const rawPercent = totalWindowMs > 0 ? (elapsedMs / totalWindowMs) * 100 : 0;
+                const percent = Math.min(100, Math.max(0, rawPercent));
+
+                if (progressBar) {
+                    progressBar.style.width = `${percent.toFixed(2)}%`;
+                }
+                if (percentEl) {
+                    percentEl.textContent = `${Math.floor(percent)}% Completed`;
+                }
+            }
+
+            updateProgress();
+            setInterval(updateProgress, 1000);
+        })();
+    </script>
+</body>
+</html>
